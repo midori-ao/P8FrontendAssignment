@@ -18,6 +18,11 @@
   color: purple;
 }
 
+.error {
+  color: red;
+  font-weight: 400;
+}
+
 .header {
   margin-bottom: 60px;
 }

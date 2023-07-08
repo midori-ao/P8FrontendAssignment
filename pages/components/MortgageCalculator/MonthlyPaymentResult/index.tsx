@@ -2,7 +2,7 @@ import styles from './styles.module.css';
 import { CircularProgress } from '@mui/material';
 
 export interface MonthlyPaymentResultProps {
-  data: number;
+  data: number | null;
   loading: any;
   error: Error | null;
 }
@@ -17,7 +17,7 @@ export const extractDollars = (number: number) => {
   const decimalIndex = priceString.indexOf(".");
 
   if (decimalIndex === -1) {
-    return number;
+    return number.toLocaleString('en-US');
   }
 
   return Number(priceString.substring(0, decimalIndex)).toLocaleString('en-US');
@@ -29,13 +29,13 @@ export const MonthlyPaymentResult = ({ data, loading, error }: MonthlyPaymentRes
     if (loading){
       return (
         <div className={styles.loading}>
-          <CircularProgress style={{ color: 'rgb(73, 41, 117)' }}/>
+          <CircularProgress data-testid="circular-progress" style={{ color: 'var(--color-button)' }}/>
         </div>
       );
     }
     if (error){
       return (
-        <div className={styles.loading}>
+        <div className={`${styles.loading} ${styles.error}`}>
           There was an error! Try again.
         </div>
       );
