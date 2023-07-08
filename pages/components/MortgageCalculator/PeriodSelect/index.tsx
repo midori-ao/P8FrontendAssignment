@@ -1,6 +1,6 @@
 import { SelectorProps } from "..";
 import { RadioGroup, FormControlLabel, FormLabel, Radio, FormControl } from '@mui/material';
-import styles from './style.module.css';
+import styles from './styles.module.css';
 
 export const PeriodSelect = ({ value, onChange }: SelectorProps) => {
   const handleSelection = (event: React.ChangeEvent<HTMLInputElement>) => {

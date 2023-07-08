@@ -8,7 +8,7 @@
 
 .subheader {
   margin-top: 10px;
-  color: rgba(47,64,73,0.5);
+  color: var(--color-secondary);
   font-weight: 400;
 }
 

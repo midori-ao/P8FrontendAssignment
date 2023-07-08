@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import useDebouncedCallback from "../../hooks/useDebouncedCallback";
 import useFetch from "../../hooks/useFetch";
-import styles from './style.module.css';
+import styles from './styles.module.css';
 import { InterestRateSlider } from "./InterestRateSlider";
 import { MonthlyPaymentResult } from "./MonthlyPaymentResult";
 import { PeriodSelect } from "./PeriodSelect";

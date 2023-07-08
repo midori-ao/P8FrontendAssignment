@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from './style.module.css'
+import styles from './styles.module.css'
 import MenuIcon from "@mui/icons-material/Menu";
 
 export const Header = () => {

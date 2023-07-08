@@ -1,4 +1,4 @@
-import styles from './style.module.css';
+import styles from './styles.module.css';
 import { CircularProgress } from '@mui/material';
 
 export interface MonthlyPaymentResultProps {
@@ -7,12 +7,12 @@ export interface MonthlyPaymentResultProps {
   error: Error | null;
 }
 
-const extractCents = (number: number) => {
+export const extractCents = (number: number) => {
   const priceArray = number.toFixed(2).toString().split(".");
   return priceArray[1] || "00";
 }
 
-const extractDollars = (number: number) => {
+export const extractDollars = (number: number) => {
   const priceString = number.toString();
   const decimalIndex = priceString.indexOf(".");
 
@@ -29,7 +29,7 @@ export const MonthlyPaymentResult = ({ data, loading, error }: MonthlyPaymentRes
     if (loading){
       return (
         <div className={styles.loading}>
-          <CircularProgress />
+          <CircularProgress style={{ color: 'rgb(73, 41, 117)' }}/>
         </div>
       );
     }

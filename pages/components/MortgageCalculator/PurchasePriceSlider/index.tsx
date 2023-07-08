@@ -1,7 +1,7 @@
 import { SelectorProps } from "..";
 import { Slider, FormLabel } from '@mui/material';
 import useDebouncedCallback from "../../../hooks/useDebouncedCallback";
-import styles from './style.module.css';
+import styles from './styles.module.css';
 import { slider } from "../slider.css";
 
 export const PurchasePriceSlider = ({ value, onChange }: SelectorProps) => {

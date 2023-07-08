@@ -1,6 +1,6 @@
 import { Header } from "../Header";
 import { Content } from "../Content";
-import styles from './style.module.css';
+import styles from './styles.module.css';
 
 interface LayoutWrapperProps {
     children: JSX.Element;

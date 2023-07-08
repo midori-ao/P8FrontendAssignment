@@ -6,7 +6,7 @@
   position: relative;
   text-align: center;
   height: 340px;
-  color: rgba(47,64,73,0.5);
+  color: var(--color-secondary);
   font-weight: 700;
 }
 
@@ -15,6 +15,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  color: purple;
 }
 
 .header {
@@ -31,7 +32,7 @@
   bottom: -30px;
   transform: translateX(-50%);
   color: white;
-  background-color: rgb(73, 41, 117);
+  background-color: var(--color-button);
   border-radius: 80px;
   cursor: pointer;
   font-size: 20px;
@@ -48,7 +49,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  color: rgba(47,64,73,1);
+  color: var(--color-primary);
 }
 
 .value {
