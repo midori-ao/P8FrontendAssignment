@@ -34,10 +34,13 @@ export const MonthlyPaymentResult = ({ data, loading, error }: MonthlyPaymentRes
       );
     }
     if (error){
-      return 'error!';
+      return (
+        <div className={styles.loading}>
+          There was an error! Try again.
+        </div>
+      );
     }
     if (data) {
-      console.log(data);
       return (
         <>
           <div className={styles.header}>Your total monthly payment will be</div>
@@ -52,9 +55,8 @@ export const MonthlyPaymentResult = ({ data, loading, error }: MonthlyPaymentRes
           </button>
         </>
       );
-    } else {
-      return null;
     }
+    return null;
   };
   
   return (
