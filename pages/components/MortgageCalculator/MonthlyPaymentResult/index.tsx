@@ -1,4 +1,5 @@
 import styles from './style.module.css';
+import { CircularProgress } from '@mui/material';
 
 export interface MonthlyPaymentResultProps {
   data: number;
@@ -25,9 +26,12 @@ const extractDollars = (number: number) => {
 export const MonthlyPaymentResult = ({ data, loading, error }: MonthlyPaymentResultProps) => {
   
   const renderContent = () => {
-    // TODO: add loading, error cases here
     if (loading){
-      return 'loading!';
+      return (
+        <div className={styles.loading}>
+          <CircularProgress />
+        </div>
+      );
     }
     if (error){
       return 'error!';
