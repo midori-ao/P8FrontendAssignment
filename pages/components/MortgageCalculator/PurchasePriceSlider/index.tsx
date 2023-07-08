@@ -2,6 +2,7 @@ import { SelectorProps } from "..";
 import { Slider, FormLabel } from '@mui/material';
 import useDebouncedCallback from "../../../hooks/useDebouncedCallback";
 import styles from './style.module.css';
+import { slider } from "../slider.css";
 
 export const PurchasePriceSlider = ({ value, onChange }: SelectorProps) => {
   const debouncedOnChange = useDebouncedCallback(onChange, 500);
@@ -10,7 +11,7 @@ export const PurchasePriceSlider = ({ value, onChange }: SelectorProps) => {
   };
 
   return (
-    <>
+    <div>
       <FormLabel id="purchasePriceSlider">
         <div className={styles.selectorName}>Purchase Price</div>
       </FormLabel>
@@ -19,6 +20,7 @@ export const PurchasePriceSlider = ({ value, onChange }: SelectorProps) => {
         <div className={styles.value}>{value.toLocaleString('en-US')}</div>
         </div>
       <Slider
+        sx={slider}
         defaultValue={250000}
         aria-labelledby="purchasePriceSlider"
         size="small"
@@ -38,6 +40,6 @@ export const PurchasePriceSlider = ({ value, onChange }: SelectorProps) => {
         onChange={handleChange}
         getAriaValueText={() => `${value}%`}
       />
-    </>
+    </div>
   );
 };

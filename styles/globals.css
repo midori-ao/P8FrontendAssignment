@@ -30,3 +30,10 @@ h3 {
   max-width: 90vw;
   margin: 0 auto;
 }
+
+@media (max-width: 767px) {
+  .centered {
+    width: 88vw;
+    max-width: 88vw;
+  }
+}

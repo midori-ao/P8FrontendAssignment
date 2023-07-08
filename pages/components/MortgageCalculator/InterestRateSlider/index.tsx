@@ -2,6 +2,7 @@ import { SelectorProps } from "..";
 import { Slider, FormLabel } from '@mui/material';
 import useDebouncedCallback from "../../../hooks/useDebouncedCallback";
 import styles from './style.module.css';
+import { slider } from "../slider.css";
 
 export const InterestRateSlider = ({ value, onChange }: SelectorProps) => {
   const debouncedOnChange = useDebouncedCallback(onChange, 500);
@@ -10,12 +11,13 @@ export const InterestRateSlider = ({ value, onChange }: SelectorProps) => {
   };
 
   return (
-    <>
+    <div>
       <FormLabel id="interestRateSlider">
         <div className={styles.selectorName}>Interest Rate</div>
       </FormLabel>
       <div className={styles.value}>{value}%</div>
       <Slider
+        sx={slider}
         defaultValue={1.5}
         size="small"
         aria-labelledby="interestRateSlider"
@@ -35,6 +37,6 @@ export const InterestRateSlider = ({ value, onChange }: SelectorProps) => {
         onChange={handleChange}
         getAriaValueText={() => `${value}%`}
       />
-    </>
+    </div>
   );
 };

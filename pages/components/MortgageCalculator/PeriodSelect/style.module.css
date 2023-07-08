@@ -1,4 +1,6 @@
 .selectorName {
   font-size: 12px;
   margin-bottom: 5px;
+  color: rgba(47,64,73,0.5);
+  font-weight: 700;
 }

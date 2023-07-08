@@ -1,12 +1,13 @@
 .container {
   background-color: white;
-  border-radius: 15px;
+  border-radius: 25px;
   padding: 35px 52px;
   box-shadow: 0px 5px 25px 5px rgba(0,0,0,0.20);
   position: relative;
   text-align: center;
   height: 340px;
   color: rgba(47,64,73,0.5);
+  font-weight: 700;
 }
 
 .loading {
@@ -57,4 +58,10 @@
 .currency {
   margin-top: 12px;
   font-size: 40px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 35px 32px;
+  }
 }

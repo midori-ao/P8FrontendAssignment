@@ -8,7 +8,7 @@ interface LayoutWrapperProps {
 
 export const LayoutWrapper = (props: LayoutWrapperProps) => {
   return (
-    <div className={styles.layoutWrapperContainer}>
+    <div className={styles.container}>
       <Header/>
       <Content>
         {props.children}

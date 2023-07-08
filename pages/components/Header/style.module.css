@@ -1,17 +1,17 @@
-.headerContainer {
-  box-shadow: 0px 10px 15px 5px #bed8ff;
+.container {
+  box-shadow: 0px 10px 15px 5px #9db8e1;
   position: relative;
   padding: 10px 0;
 }
 
 .headerContent {
   display: flex;
-  flex-direction: 'row';
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
 .menuIcon {
   color: rgba(46,64,73,1);
-  cursor:pointer;
+  cursor: pointer;
 }

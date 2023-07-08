@@ -7,7 +7,7 @@ import { GoogleFonts } from 'next-google-fonts';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter&display=swap" />
+      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" />
       <LayoutWrapper>
         <Component {...pageProps} />
       </LayoutWrapper>

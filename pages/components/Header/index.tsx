@@ -4,7 +4,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 export const Header = () => {
   return (
-    <header className={styles.headerContainer}>
+    <header className={styles.container}>
       <div className={`centered ${styles.headerContent}`}>
         <Image
           src="/p8Wordmark_sm.svg"

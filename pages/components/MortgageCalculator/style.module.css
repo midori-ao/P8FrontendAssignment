@@ -8,6 +8,12 @@
   position: relative;
 }
 
+.leftColumn {
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 767px) {
   .container {
     grid-template-columns: 1fr;
