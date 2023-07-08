@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import useDebouncedCallback from "../../hooks/useDebouncedCallback";
+import useFetch from "../../hooks/useFetch";
 import styles from './style.module.css';
 import { InterestRateSlider } from "./InterestRateSlider";
 import { MonthlyPaymentResult } from "./MonthlyPaymentResult";
@@ -15,6 +17,14 @@ export const MortgageCalculator = () => {
   const [rate, setRate] = useState<number>(1.5);
   const [period, setPeriod] = useState<number>(25);
 
+  const { fetchMortgageCalculation, loading, error, data } = useFetch(price, rate, period);
+
+  const debouncedFetchMortgageCalculation = useDebouncedCallback(fetchMortgageCalculation, 500);
+
+  useEffect(() => {
+    debouncedFetchMortgageCalculation();
+  }, [price, rate, period, debouncedFetchMortgageCalculation]);
+
   return (
     <div className={styles.container}>
       <div className={styles.leftColumn}>
@@ -23,7 +33,7 @@ export const MortgageCalculator = () => {
         <PeriodSelect value={period} onChange={setPeriod}/>
       </div>
       <div className={styles.rightColumn}>
-        <MonthlyPaymentResult value={0.23}/>
+        <MonthlyPaymentResult data={data} loading={loading} error={error}/>
       </div>
     </div>
   );

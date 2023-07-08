@@ -1,10 +1,12 @@
 import { SelectorProps } from "..";
 import { Slider, FormLabel } from '@mui/material';
+import useDebouncedCallback from "../../../hooks/useDebouncedCallback";
 import styles from './style.module.css';
 
 export const PurchasePriceSlider = ({ value, onChange }: SelectorProps) => {
+  const debouncedOnChange = useDebouncedCallback(onChange, 500);
   const handleChange = (event: any, newValue: number | number[]) => {
-    onChange(newValue as number);
+    debouncedOnChange(newValue as number);
   };
 
   return (
@@ -17,7 +19,7 @@ export const PurchasePriceSlider = ({ value, onChange }: SelectorProps) => {
         <div className={styles.value}>{value.toLocaleString('en-US')}</div>
         </div>
       <Slider
-        defaultValue={value}
+        defaultValue={250000}
         aria-labelledby="purchasePriceSlider"
         size="small"
         min={50000}

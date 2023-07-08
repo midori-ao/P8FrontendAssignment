@@ -1,7 +1,9 @@
 import styles from './style.module.css';
 
 export interface MonthlyPaymentResultProps {
-  value: number;
+  data: number;
+  loading: any;
+  error: Error | null;
 }
 
 const extractCents = (number: number) => {
@@ -20,18 +22,25 @@ const extractDollars = (number: number) => {
   return Number(priceString.substring(0, decimalIndex)).toLocaleString('en-US');
 };
 
-export const MonthlyPaymentResult = ({ value }: MonthlyPaymentResultProps) => {
+export const MonthlyPaymentResult = ({ data, loading, error }: MonthlyPaymentResultProps) => {
   
   const renderContent = () => {
     // TODO: add loading, error cases here
-    if (true) {
+    if (loading){
+      return 'loading!';
+    }
+    if (error){
+      return 'error!';
+    }
+    if (data) {
+      console.log(data);
       return (
         <>
           <div className={styles.header}>Your total monthly payment will be</div>
           <div className={styles.paymentContainer}>
             <span className={styles.currency}>$</span>
-            <div className={styles.value}>{extractDollars(value)}</div>
-            <span className={styles.currency}>{extractCents(value)}</span>
+            <div className={styles.value}>{extractDollars(data)}</div>
+            <span className={styles.currency}>{extractCents(data)}</span>
           </div>
           <div className={styles.month}>/month</div>
           <button className={styles.applyButton}>

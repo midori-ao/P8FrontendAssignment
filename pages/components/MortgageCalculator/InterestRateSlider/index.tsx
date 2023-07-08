@@ -1,10 +1,12 @@
 import { SelectorProps } from "..";
 import { Slider, FormLabel } from '@mui/material';
+import useDebouncedCallback from "../../../hooks/useDebouncedCallback";
 import styles from './style.module.css';
 
 export const InterestRateSlider = ({ value, onChange }: SelectorProps) => {
-  const handleChange = (_event: any, newValue: number | number[]) => {
-    onChange(newValue as number);
+  const debouncedOnChange = useDebouncedCallback(onChange, 500);
+  const handleChange = (event: any, newValue: number | number[]) => {
+    debouncedOnChange(newValue as number);
   };
 
   return (
