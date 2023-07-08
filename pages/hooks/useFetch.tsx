@@ -23,7 +23,8 @@ export default (principal: number, annualInterestRate: number, termOfLoan: numbe
       });
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        const errorResponse = await response.json();
+        throw new Error(errorResponse.error);
       }
 
       const data = await response.json();

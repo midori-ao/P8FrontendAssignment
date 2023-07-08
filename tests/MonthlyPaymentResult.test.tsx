@@ -32,8 +32,8 @@ describe('MonthlyPaymentResult', () => {
   });
 
   it('renders error state correctly', () => {
-    render(<MonthlyPaymentResult loading={false} error={new Error} data={null} />);
-    expect(screen.getByText("There was an error! Try again.")).toBeInTheDocument();
+    render(<MonthlyPaymentResult loading={false} error={new Error('There was a problem calculating your mortgage. Please check your inputs')} data={null} />);
+    expect(screen.getByText("There was a problem calculating your mortgage. Please check your inputs")).toBeInTheDocument();
   });
 
   it('renders data correctly', () => {

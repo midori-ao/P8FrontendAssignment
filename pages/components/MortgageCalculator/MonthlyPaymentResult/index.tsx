@@ -36,7 +36,7 @@ export const MonthlyPaymentResult = ({ data, loading, error }: MonthlyPaymentRes
     if (error){
       return (
         <div className={`${styles.loading} ${styles.error}`}>
-          There was an error! Try again.
+          {error.message}
         </div>
       );
     }
