@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.leftColumn {
+  width: calc(50% - 80px);
+  order: 1;
+  padding-right: 80px;
+}
+
+.rightColumn {
+  width: calc(50% - 80px);
+  order: 2;
+  padding-left: 80px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .leftColumn,
+  .rightColumn {
+    width: 100%;
+    padding: 0;
+  }
+
+  .rightColumn {
+    margin-top: 20px;
+  }
+}

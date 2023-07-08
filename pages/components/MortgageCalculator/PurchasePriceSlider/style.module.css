@@ -1,0 +1,18 @@
+.selectorName {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.valueContainer {
+  display: flex;
+  align-items: flex-start;
+}
+
+.currency {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.value {
+  font-size: 32px;
+}

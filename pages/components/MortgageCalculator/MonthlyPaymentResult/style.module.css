@@ -1,0 +1,51 @@
+.container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 35px 52px;
+  box-shadow: 0px 5px 25px 5px rgba(0,0,0,0.20);
+  position: relative;
+  text-align: center;
+  color: rgba(47,64,73,0.5);
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+.month {
+  margin-bottom: 30px;
+}
+
+.applyButton {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: rgb(73, 41, 117);
+  border-radius: 80px;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 20px;
+  border: none;
+}
+
+.applyButton:hover {
+  background-color: rgb(44, 25, 70);
+}
+
+.paymentContainer {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: rgba(47,64,73,1);
+}
+
+.value {
+  font-size: 90px;
+}
+
+.currency {
+  margin-top: 12px;
+  font-size: 40px;
+}

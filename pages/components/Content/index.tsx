@@ -6,7 +6,7 @@ interface ContentProps {
 
 export const Content = (props: ContentProps) => {
   return (
-    <div className={`${styles.contentContainer}`}>
+    <div className={styles.contentContainer}>
       <div className={'centered'}>
         {props.children}
       </div>
