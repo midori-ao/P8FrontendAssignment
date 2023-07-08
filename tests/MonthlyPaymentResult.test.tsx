@@ -23,7 +23,6 @@ describe('extractDollars', () => {
   });
 });
 
-// Test MonthlyPaymentResult component
 describe('MonthlyPaymentResult', () => {
   it('renders loading state correctly', () => {
     render(<MonthlyPaymentResult loading={true} error={null} data={null} />);
