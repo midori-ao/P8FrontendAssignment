@@ -9,5 +9,8 @@ describe('mortgage Calculator component', () => {
 
     const interestRate = screen.getByText('1.5%');
     expect(interestRate).toBeInTheDocument();
+
+    const radioButton = screen.getByLabelText('25 years') as HTMLInputElement;
+    expect(radioButton.checked).toBe(true);
   });
 });
