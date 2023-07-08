@@ -1,0 +1,20 @@
+.selectorName {
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+.valueContainer {
+  display: flex;
+  align-items: flex-start;
+}
+
+.currency {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.value {
+  font-size: 32px;
+}
